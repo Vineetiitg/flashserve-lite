@@ -1,0 +1,94 @@
+{
+  "hf": [
+    {
+      "num_requests": 1,
+      "total_tokens_generated": 64,
+      "wall_clock_seconds": 8.84,
+      "throughput_tokens_per_sec": 7.24,
+      "ttft_p50_ms": 0.0,
+      "ttft_p95_ms": 0.0,
+      "itl_p50_ms": 0.0,
+      "itl_p95_ms": 0.0,
+      "gpu_peak_memory_mb": 952.91
+    },
+    {
+      "num_requests": 2,
+      "total_tokens_generated": 128,
+      "wall_clock_seconds": 16.54,
+      "throughput_tokens_per_sec": 7.74,
+      "ttft_p50_ms": 0.0,
+      "ttft_p95_ms": 0.0,
+      "itl_p50_ms": 0.0,
+      "itl_p95_ms": 0.0,
+      "gpu_peak_memory_mb": 953.25
+    },
+    {
+      "num_requests": 4,
+      "total_tokens_generated": 256,
+      "wall_clock_seconds": 24.22,
+      "throughput_tokens_per_sec": 10.57,
+      "ttft_p50_ms": 0.0,
+      "ttft_p95_ms": 0.0,
+      "itl_p50_ms": 0.0,
+      "itl_p95_ms": 0.0,
+      "gpu_peak_memory_mb": 953.25
+    },
+    {
+      "num_requests": 8,
+      "total_tokens_generated": 512,
+      "wall_clock_seconds": 25.03,
+      "throughput_tokens_per_sec": 20.45,
+      "ttft_p50_ms": 0.0,
+      "ttft_p95_ms": 0.0,
+      "itl_p50_ms": 0.0,
+      "itl_p95_ms": 0.0,
+      "gpu_peak_memory_mb": 954.4
+    }
+  ],
+  "flashserve": [
+    {
+      "num_requests": 1,
+      "total_tokens_generated": 64,
+      "wall_clock_seconds": 9.99,
+      "throughput_tokens_per_sec": 6.41,
+      "ttft_p50_ms": 319.49,
+      "ttft_p95_ms": 319.49,
+      "itl_p50_ms": 151.83,
+      "itl_p95_ms": 203.25,
+      "gpu_peak_memory_mb": 2453.8
+    },
+    {
+      "num_requests": 2,
+      "total_tokens_generated": 128,
+      "wall_clock_seconds": 10.72,
+      "throughput_tokens_per_sec": 11.94,
+      "ttft_p50_ms": 506.97,
+      "ttft_p95_ms": 506.97,
+      "itl_p50_ms": 158.73,
+      "itl_p95_ms": 207.63,
+      "gpu_peak_memory_mb": 2455.32
+    },
+    {
+      "num_requests": 4,
+      "total_tokens_generated": 256,
+      "wall_clock_seconds": 3.83,
+      "throughput_tokens_per_sec": 66.92,
+      "ttft_p50_ms": 257.0,
+      "ttft_p95_ms": 257.0,
+      "itl_p50_ms": 56.16,
+      "itl_p95_ms": 68.88,
+      "gpu_peak_memory_mb": 2459.01
+    },
+    {
+      "num_requests": 8,
+      "total_tokens_generated": 512,
+      "wall_clock_seconds": 11.28,
+      "throughput_tokens_per_sec": 45.38,
+      "ttft_p50_ms": 1536.47,
+      "ttft_p95_ms": 1544.1,
+      "itl_p50_ms": 130.28,
+      "itl_p95_ms": 289.24,
+      "gpu_peak_memory_mb": 2479.11
+    }
+  ]
+}
