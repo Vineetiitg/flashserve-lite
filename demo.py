@@ -30,7 +30,7 @@ def print_banner():
     print("  ─────────────────────────────────────────────────")
     if torch.cuda.is_available():
         print(f"  GPU: {torch.cuda.get_device_name()}")
-        mem = torch.cuda.get_device_properties(0).total_mem / (1024**3)
+        mem = torch.cuda.get_device_properties(0).total_memory / (1024**3)
         print(f"  VRAM: {mem:.1f} GB")
     else:
         print("  Device: CPU (no CUDA GPU detected)")
@@ -42,9 +42,11 @@ async def run_demo(
     max_tokens: int,
     temperature: float,
     quantization: str,
+    model_name: str = "Qwen/Qwen2.5-0.5B-Instruct",
 ):
     """Run a single generation request through the engine."""
     config = EngineConfig(
+        model_name=model_name,
         quantization=quantization,
         max_new_tokens=max_tokens,
         temperature=temperature,
@@ -123,6 +125,12 @@ async def run_demo(
 def main():
     parser = argparse.ArgumentParser(description="FlashServe-Lite Quick Demo")
     parser.add_argument(
+        "--model",
+        type=str,
+        default="Qwen/Qwen2.5-0.5B-Instruct",
+        help="Model ID from HuggingFace (e.g. Qwen/Qwen2.5-1.5B-Instruct)",
+    )
+    parser.add_argument(
         "--prompt",
         type=str,
         default="Explain how a paged KV cache works in LLM inference in 3 sentences.",
@@ -134,7 +142,7 @@ def main():
     args = parser.parse_args()
 
     print_banner()
-    asyncio.run(run_demo(args.prompt, args.max_tokens, args.temperature, args.quantization))
+    asyncio.run(run_demo(args.prompt, args.max_tokens, args.temperature, args.quantization, args.model))
 
 
 if __name__ == "__main__":
