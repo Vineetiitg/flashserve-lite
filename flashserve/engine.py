@@ -10,6 +10,13 @@ Supports FP16, INT8, and INT4 precision modes via bitsandbytes quantization.
 
 from typing import Optional
 import torch
+
+try:
+    import torch.utils._pytree as _torch_pytree
+    _torch_pytree._cxx_pytree_dynamo_traceable = False
+except Exception:
+    pass
+
 from transformers import AutoModelForCausalLM, AutoTokenizer, DynamicCache
 
 from flashserve.config import EngineConfig
